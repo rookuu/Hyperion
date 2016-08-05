@@ -73,3 +73,17 @@
 .song-desc {
     margin-left: 50px;
 }
+
+.intro-header {
+    font-size: x-large;
+    font-family: aldrich,  sans-serif;
+}
+
+.intro-container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.intro-container > p {
+    padding: 20px;
+}

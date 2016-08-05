@@ -34,7 +34,6 @@ def printMenu():
     print "3: Next"
     print "4: Previous\n"
 
-
 def getAllWindowTitles():
     titles = []
 
@@ -48,7 +47,6 @@ def getAllWindowTitles():
 
 def getWindowTitle(handle):
     return win32gui.GetWindowText(handle)
-
 
 
 def setup():
@@ -86,7 +84,7 @@ def simNextSong():
 
 def simPrevSong():
     hwcode = win32api.MapVirtualKey(VK_MEDIA_PREV_TRACK, 0)
-    win32api.keybd_event(VK_MEDIA_PREV_TRACK, 0)
+    win32api.keybd_event(VK_MEDIA_PREV_TRACK, hwcode)
 
 if __name__ == '__main__':
     setup()

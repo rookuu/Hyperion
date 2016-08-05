@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,16 +33,29 @@
 
 <div class="container intro-container">
     <div class="intro-header">Introduction</div>
-<p>Welcome to <i>Hyperion.</i> <br><br>
-  <b>Host: </b>HyperionClient.py should be running on the Spotify computer. If it isn't, then turn it on now.<br><br>
-Add a song and start the playlist (ensure that shuffle is off if you want the songs to be played in order).<br><br>
-  <b>Guests:</b> Push 'Add' to add songs to the playlist or 'Skip' to vote to skip the currently played song. Half the people connected (rounded up) must vote for a song to be skipped.<br><br>Enter your name below and push login to join the session.</p>
+    <p>Welcome to <i>Hyperion.</i> <br><br>
+        <b>Host: </b>HyperionClient.py should be running on the Spotify computer. If it isn't, then turn it on
+        now.<br><br>
+        Add a song and start the playlist (ensure that shuffle is off if you want the songs to be played in
+        order).<br><br>
+        <b>Guests:</b> Push 'Add' to add songs to the playlist or 'Skip' to vote to skip the currently played song. Half
+        the people connected (rounded up) must vote for a song to be skipped.<br><br>Enter your name below and push
+        login to join the session.</p>
+
     <div class="intro-header">What is your name?</div>
-    <div class="form-group" style="
+    <form role="form" id="login">
+        <fieldset>
+            <div class="form-group" style="
     padding: 20px;
 ">
-              <input type="text" placeholder="My name is..." class="form-control" autocomplete="off" style="cursor: auto;">
-    </div>
+                <input type="text" placeholder="My name is..." class="form-control" autocomplete="off"
+                       style="cursor: auto;" id="username" name="username">
+                <button type="button" class="btn btn-success btn-circle btn-lg btn-login">
+                    <span>Login</span>
+                </button>
+            </div>
+        </fieldset>
+    </form>
 </div>
 
 <!-- Fixed bottom navbar -->
@@ -52,12 +65,27 @@ Add a song and start the playlist (ensure that shuffle is off if you want the so
     </div>
 </nav>
 
-<!-- Bootstrap core JavaScript
+<!-- JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
 <script src="js/bootstrap.min.js"></script>
-
+<script src="js/js.cookie.js"></script>
+<script>
+    $(function () {
+        if (Cookies.get("hyperion-username")) {
+            window.location = "/"
+        } else {
+            $("#login").submit(function (event) {
+                event.preventDefault();
+                if ($("#username").val() !== '') {
+                    Cookies.set("hyperion-username", $("#username").val());
+                    window.location = "/";
+                }
+            })
+        }
+    })
+</script>
 </body>
 </html>

@@ -87,3 +87,8 @@
 .intro-container > p {
     padding: 20px;
 }
+
+.btn-login {
+    margin: 20px;
+    margin-bottom: 50px;
+}

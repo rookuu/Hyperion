@@ -1,0 +1,75 @@
+.navbar-fixed-top > .container {
+    height: 90px;
+}
+
+.navbar-fixed-bottom > .container {
+    height: 60px;
+}
+
+.navbar-brand {
+    width: 100%;
+    text-align: center;
+    border: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font: normal normal 900 40px/normal "Aldrich", Helvetica, sans-serif;
+    color: rgb(32, 44, 45);
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: 0 1px 0 rgb(128,141,147) , -1px 0 0 rgb(205,210,213) , -1px 2px 0 rgb(128,141,147) , -2px 1px 0 rgb(205,210,213) , -2px 3px 0 rgb(128,141,147) , -3px 2px 0 rgb(205,210,213) , -3px 4px 0 rgb(128,141,147) , -4px 3px 0 rgb(205,210,213) , -4px 5px 0 rgb(128,141,147) , -5px 4px 0 rgb(205,210,213) , -5px 6px 0 rgb(128,141,147) , -6px 5px 0 rgb(205,210,213) , -6px 7px 0 rgb(128,141,147) , -7px 6px 0 rgb(205,210,213) , -7px 8px 0 rgb(128,141,147) , -8px 7px 0 rgb(205,210,213) ;
+    -webkit-transition: none;
+    -moz-transition: none;  -o-transition: none;
+    transition: none;
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transform-origin: 50% 50% 0;
+    transform-origin: 50% 50% 0;
+}
+
+.container > .navbar-header {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-circle {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    display:table-cell;
+    text-align:center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.song-list {
+    margin-top: 100px;
+}
+
+.song-item {
+    width: 100%;
+    height: 50px;
+    padding: 35px;
+}
+
+.song-title {
+    font-size: large;
+}
+
+.song-artist-album {
+    font-size: smaller;
+}
+
+.song-img {
+    float: left;
+}
+
+.song-desc {
+    margin-left: 50px;
+}

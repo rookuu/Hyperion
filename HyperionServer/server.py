@@ -1,9 +1,5 @@
-from gevent import monkey
-
-monkey.patch_all()
-
 from flask import Flask, render_template, session, request
-from flask.ext.socketio import SocketIO, emit
+from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
 app.debug = True
@@ -12,11 +8,11 @@ socketio = SocketIO(app)
 
 @app.route('/')
 def hyperion():
-    return render_template('html/index.html')
+    return render_template('index.html')
 
 @app.route('/login')
 def login():
-    return render_template('html/login.html')
+    return render_template('login.html')
 
 @socketio.on('connect')
 def user_connect():

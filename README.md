@@ -1,3 +1,3 @@
 # Hyperion
 
-Colaberative Spotify playlist platform. 
+Collaberative Spotify playlist platform. 
